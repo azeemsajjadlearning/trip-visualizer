@@ -1,0 +1,204 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #3f51b5;
+}
+
+form {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.error {
+  color: #f44336;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+button {
+  background-color: #3f51b5;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.itinerary-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.trip-visualization {
+  position: relative;
+  margin: 50px 0;
+}
+
+.trip-levels {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  height: 100%;
+}
+
+.level {
+  padding: 5px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.level-1 {
+  color: #2196f3;
+}
+
+.level-2 {
+  color: #ff9800;
+  margin-top: 50px;
+}
+
+.trips-container {
+  position: relative;
+}
+
+.trip {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.trip.level-1 {
+  margin-top: 0;
+}
+
+.trip.level-2 {
+  margin-top: 50px;
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.point-marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #3f51b5;
+}
+
+.trip.level-2 .point-marker {
+  background-color: #ff9800;
+}
+
+.point-code {
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.start .point-code {
+  color: #3f51b5;
+}
+
+.end .point-code {
+  color: #f44336;
+}
+
+.connection {
+  flex-grow: 1;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  height: 2px;
+  background-color: #3f51b5;
+  width: 100%;
+  position: relative;
+}
+
+.trip.level-2 .line {
+  background-color: #ff9800;
+}
+
+.line.with-arrow::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -4px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid #3f51b5;
+}
+
+.trip.level-2 .line.with-arrow::after {
+  border-left-color: #ff9800;
+}
+
+.delete-btn {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  background-color: #f44336;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  padding: 0;
+}
+
+.trip-list {
+  margin-top: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
